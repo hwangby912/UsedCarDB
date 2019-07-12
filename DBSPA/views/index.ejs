@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>SPA 1st Project Page</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' /> <!-- css 가져오기 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- jQuery CDN 가져오기 -->
+		<script src="javascripts/listener.js"></script> <!-- callback 함수로 이루어진 listener.js file 가져오기 -->
+		
+		<style>
+			/* index.ejs에서 쓰일 style이기에 css file에 안넣어 놓았으며, 배경이미지로 가져옴 */
+			body {
+				background-image: url('/images/noIndexBackground.PNG');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-position: top;
+			}
+		</style>
+	</head>
+
+	<body>
+        <div>
+			<!-- 항목을 위에서 볼 수 있도록 하기 위해 설정한 div tag-->
+			<div id = 'backgroundBlack'>Click the button you want
+				<div id = 'container'>
+					<a href = '/'><input type = 'button' id = 'home' value = 'HOME'></a>
+					<a href = '/signup'><input type = 'button' id = 'signup' value = 'SIGN UP'></a>
+					<a href = '/login'><input type = 'button' id = 'login' value = 'LOGIN'></a>
+					<a href = '/search'><input type = 'button' id = 'search' value = 'SEARCH'></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

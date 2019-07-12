@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>SPA 1st Project Page</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="javascripts/listener.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <div id = 'backgroundWhite'>Click the button you want
+                <div id = 'container'>
+                    <a href = '/'><input type = 'button' id = 'home' value = 'HOME'></a>
+                    <a href = '/signup'><input type = 'button' id = 'signup' value = 'SIGN UP'></a>
+                    <a href = '/login'><input type = 'button' id = 'login' value = 'LOGIN'></a>
+                    <a href = '/search'><input type = 'button' id = 'search' value = 'SEARCH'></a>
+                </div>
+            </div>
+        </div>
+
+        <div id = "searchDiv">
+            <!-- search를 처리하기 위한 div -->
+            <fieldset>
+                <legend><h2>Search</h2></legend>
+                <div>
+                    <input placeholder = 'Search' id = 'searchValue'> <!-- 검색 기능을 하는 공간-->
+                    <button type = 'submit' id = 'searchBtn'>Go</button> <!-- 검색창에 해당하는 공간-->
+                    <br />
+                </div>
+                <%
+                    if(searchValue) {
+                %>
+                <!-- searchValue에 값이 있는 경우이며, searchValue에 대한 검색 결과를 출력한다. -->
+                <h2><%= searchValue %>에 대한 검색 결과입니다. </h2>
+                <%
+                    } else {
+                %>
+                <!-- searchValue에 값이 없는 경우이며, 검색어를 입력하라고 출력함 -->
+                <h2>검색어를 입력해 주시기 바랍니다. </h2>
+                <%
+                    }
+                %>
+            </fieldset>
+        </div>
+    </body>
+</html>

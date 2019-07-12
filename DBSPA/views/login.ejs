@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>SPA 1st Project Page</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="javascripts/listener.js"></script>
+        <style>
+            /* login.ejs에서 쓰일 style이기에 css file에 안넣어 놓았으며, 배경이미지로 가져옴 */
+            body {
+                background-image: url('/images/registerPicture.PNG');
+                background-repeat: repeat-y;
+            }
+        </style>
+	</head>
+
+	<body>
+		<div>
+            <div id = 'backgroundWhite'>Click the button you want
+		    	<div id = 'container'>
+			    	<a href = '/'><input type = 'button' id = 'home' value = 'HOME'></a>
+				    <a href = '/signup'><input type = 'button' id = 'signup' value = 'SIGN UP'></a>
+				    <a href = '/login'><input type = 'button' id = 'login' value = 'LOGIN'></a>
+    				<a href = '/search'><input type = 'button' id = 'search' value = 'SEARCH'></a>
+		    	</div>
+            </div>
+        </div>
+
+        <div id = 'loginDiv'>
+            <!-- login을 처리하기 위한 div -->
+            <fieldset>
+                <legend><h2>LOG IN</h2></legend>
+                <div id = 'loginAd'>
+                    <img src = 'images/advertisement.PNG' width = '400px'>
+                </div>
+                <%
+                    if(loginState) {
+                %>
+                <!-- loginState의 값이 있는 경우이며, 이름을 출력하며 Log Out 버튼이 나옴 -->
+                <h2><%= loginName %>님 환영합니다. </h2>
+                <button id = 'logoutBtn'>LOG OUT</button>
+                <%
+                   } else {                       
+                %>
+
+                <!-- loginState의 값이 없는 경우이며, 로그인에 필요한 ID와 PWD를 입력하도록 함-->
+                <div id = 'loginContents'>
+                    <div id = 'loginMain'>
+                        ID<br><input id = 'loginID' placeholder = 'ID'><br> <!-- ID를 입력하는 공간 -->
+                        Password<br><input id = 'loginPW' type = 'password' placeholder = 'Password'><br> <!-- PWD를 입력하는 공간 -->
+                        <button id = 'loginBtn'>LOG IN</button> <!-- 모두 입력한 뒤 누르는 버튼 -->
+                        <button id = 'loginClearBtn'>CLEAR</button> <!-- 입력한 모든 것을 초기화 시키는 버튼 -->
+                    </div>
+                </div>
+
+                <%
+                    }
+                %>
+            </fieldset>
+        </div>
+	</body>
+</html>

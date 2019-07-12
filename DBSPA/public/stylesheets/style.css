@@ -1,0 +1,93 @@
+#backgroundWhite {
+  padding: 15px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#backgroundBlack {
+  padding: 15px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+div#container a input {
+  margin-top: 20px;
+}
+
+#signupDiv {
+  margin-left : 425px;
+}
+
+div#signupDiv div input {
+  width : 200px;
+}
+
+div#signupAd {
+  display: inline;
+  float: right;
+}
+
+#loginDiv {
+  margin-left : 425px;
+}
+
+div#loginDiv div input {
+  width : 200px;
+}
+
+div#loginAd {
+  display: inline;
+  float: right;
+}
+
+div#searchDiv div input {
+  width : 200px;
+}
+
+body input {
+  background-color: #2F2E2E;
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  border-style: solid;
+  width : 100px;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+:-moz-placeholder {
+  color: #a8a8a8;
+}
+
+body button {
+  background-color : #2F2E2E;
+  color : white;
+  margin-top: 30px;
+  padding : 10px;
+  position: center;
+  width : 150px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+button#logoutBtn {
+  color : red;
+}
+
+div#inputGroupAddon:hover {
+  cursor: pointer;
+}
+
+legend {
+  text-align: left;
+}
